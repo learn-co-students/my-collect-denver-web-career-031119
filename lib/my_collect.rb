@@ -1,9 +1,9 @@
-
-
 def my_collect(array)
-  array = ['ruby', 'javascript', 'python', 'objective-c']
-  array.collect do |array_item|
-    array_item.upcase.split(" ").first
+  i = 0
+  collect = []
+  while i < array.length
+    collect << yield(array[i])
+    i+=1
   end
+  collect
 end
-end upcase
